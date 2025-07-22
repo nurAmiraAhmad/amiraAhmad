@@ -8,16 +8,35 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>John dan Sarah</title>
+    <title>Amira & Faiz</title>
 </head>
+
+<audio id="weddingSound" type="audio/mp3" src="./music/page.mp3" preload="auto"></audio>
+
+<!-- Let the weddingSound to be play after user click the "buka" button. -->
+<script>
+    function toggleOverlay() {
+      const overlay = document.getElementById('overlay');
+      const audio = document.getElementById('weddingSound');
+
+      if (overlay.style.display === 'none' || !overlay.style.display) {
+        overlay.style.display = 'flex';
+        audio.play();
+      } else {
+        overlay.style.display = 'none';
+        audio.pause();
+        audio.currentTime = 0; // Reset
+      }
+    }
+</script>
 
 <body>
     <div class="wrapper">
         <div id="overlay" class="overlay">
             <div class="overlay-content">
-                <button id="toggle-content" class="toggle-button">
-                    <p>John</p>
-                    <p>Sarah</p>
+                <button id="toggle-content" class="toggle-button" onclick="toggleOverlay()">
+                    <p>Amira</p>
+                    <p>Faiz</p>
                     <p class="buka">Buka</p>
                 </button>
             </div>
@@ -27,18 +46,10 @@
         <div class="petal-container"></div>
         <!-- Intro Section -->
         <section class="intro">
-            <div class="content">
-                <img src="./images/bismillah.png" alt="" class="fade-top-1">
-                <p class="title fade-top-2">Walimatul urus</p>
-                <h2 class="fade-top-3">John</h2>
-                <h2 class="fade-top-3">&</h2>
-                <h2 class="fade-top-3">Sarah</h2>
-                <p class="date fade-top-4">
-                    <span>Sabtu</span>
-                    <span>|</span>
-                    <span>31 December 9999</span>
-                </p>
-            </div>
+            <video autoplay muted loop playsinline style="width: 100%; height: auto;">
+                <source src="./images/video_invitation_faiz_amira.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </section>
 
         <!-- Event Info Section -->
@@ -49,30 +60,30 @@
                     <p>Dengan penuh kesyukuran</p>
                     <p>kami</p>
                     <div class="parent">
-                        <p>Ali Bin Abu</p>
+                        <p>Ahmad Bin Ibrahim</p>
                         <p>&</p>
-                        <p>Miya Binti Kasim</p>
+                        <p>Mazhariah Binti Abd Majid</p>
                     </div>
                     <p>Menjemput</p>
                     <p>Dato' | Datin | Tuan | Puan | Encik | Cik</p>
                     <p>seisi keluarga hadir ke</p>
-                    <p>majlis perkahwinan putera kami</p>
+                    <p>majlis perkahwinan puteri kami</p>
                 </div>
                 <div class="two">
-                    <p>Muhamad John Bin Ali</p>
-                    <p>&</p>
-                    <p>Nur Sarah Binti Anwar</p>
+                    <p>Nur Amira Binti Ahmad</p>
+                    <p>bersama pilihan hatinya</p>
+                    <p>Faiz Izuddin Bin Abu Talib</p>
                 </div>
                 <div class="three">
                     <p class="title">Tempat</p>
-                    <p>10A Jalan Seri Ampang 2</p>
-                    <p>Kampung Pisang</p>
-                    <p>47300 Subang, Selangor</p>
+                    <p>Kampung Jerangsang,</p>
+                    <p>27310,</p>
+                    <p>Benta, Pahang</p>
                 </div>
                 <div class="four">
                     <p class="title">Tarikh</p>
-                    <p>Sabtu, 31 December 9999</p>
-                    <p>Bersamaan 30 Zulhijjah 9999H</p>
+                    <p>Sabtu, 25 Oktober 2025</p>
+                    <p>Bersamaan 4 Jamadil Awal 1447H</p>
                 </div>
                 <div class="five">
                     <p class="title">Masa</p>
@@ -132,90 +143,20 @@
                     <p>4:00 Petang</p>
                 </div>
             </div>
-            <div class="ucapan reveal fade-bottom">
+            <div class="ucapan reveal fade-bottom" style="margin-bottom: 50px;">
                 <div class="container">
                     <img src="./images/ucapan-bg.png" alt="">
                     <div class="content">
-                        <p>Ya Allah, berkatilah majlis perkahwinan ini, limpahkan baraqah dan rahmat kepada kedua
-                            mempelai ini,
+                        <b><p>Doa untuk Pengantin</p></b>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <p>Ya Allah, berkatilah majlis perkahwinan ini, limpahkan baraqah dan rahmat kepada
+                            Nur Amira dan Faiz Izuddin,
                             Kurniakanlah mereka
                             zuriat yang soleh dan solehah. Kekalkanlah jodoh mereka di dunia dan di akhirat dan
                             sempurnakanlah
                             agama mereka dengan
                             berkat ikatan ini.</p>
                     </div>
-                </div>
-            </div>
-            <img src="./images/divider.png" alt="" class="divider reveal fade-bottom">
-            <div class="rsvp">
-                <h2 class="reveal fade-bottom">Ucapan</h2>
-                <div class="container-message reveal fade-bottom">
-                    <div class="content">
-                        <p class="name">Anonymous</p>
-                        <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor velit
-                            in tincidunt vehicula. Nam fermentum
-                            finibus
-                            purus, id vulputate nibh rhoncus vel.</p>
-                    </div>
-                    <div class="content">
-                        <p class="name">Anonymous</p>
-                        <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor velit
-                            in tincidunt vehicula. Nam fermentum
-                            finibus
-                            purus, id vulputate nibh rhoncus vel.</p>
-                    </div>
-                    <div class="content">
-                        <p class="name">Anonymous</p>
-                        <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor velit
-                            in tincidunt vehicula. Nam fermentum
-                            finibus
-                            purus, id vulputate nibh rhoncus vel.</p>
-                    </div>
-                    <div class="content">
-                        <p class="name">Anonymous</p>
-                        <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor velit
-                            in tincidunt vehicula. Nam fermentum
-                            finibus
-                            purus, id vulputate nibh rhoncus vel.</p>
-                    </div>
-                    <div class="content">
-                        <p class="name">Anonymous</p>
-                        <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor velit
-                            in tincidunt vehicula. Nam fermentum
-                            finibus
-                            purus, id vulputate nibh rhoncus vel.</p>
-                    </div>
-                    <div class="content">
-                        <p class="name">Anonymous</p>
-                        <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor velit
-                            in tincidunt vehicula. Nam fermentum
-                            finibus
-                            purus, id vulputate nibh rhoncus vel.</p>
-                    </div>
-                    <div class="content">
-                        <p class="name">Anonymous</p>
-                        <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor velit
-                            in tincidunt vehicula. Nam fermentum
-                            finibus
-                            purus, id vulputate nibh rhoncus vel.</p>
-                    </div>
-                    <div class="content">
-                        <p class="name">Anonymous</p>
-                        <p class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor velit
-                            in tincidunt vehicula. Nam fermentum
-                            finibus
-                            purus, id vulputate nibh rhoncus vel.</p>
-                    </div>
-                </div>
-                <div class="beri-ucapan-button reveal fade-bottom">
-                    <button id="kehadiran-btn">
-                        <i class='bx bxs-check-square'></i>
-                        <span>Sahkan Kehadiran</span>
-                    </button>
-                    <button id="ucapan-btn">
-                        <i class='bx bxs-pen'></i>
-                        <span>Berikan Ucapan</span>
-                    </button>
                 </div>
             </div>
         </section>
@@ -235,9 +176,9 @@
         <div class="calendar">
             <h1>Calendar</h1>
             <p>
-                <span>31 December 9999</span>
+                <span>25 Oktober 2025</span>
                 <span>|</span>
-                <span>30 Zulhijjah 9999H</span>
+                <span>4 Jamadilawal 1447H</span>
             </p>
             <div class="button">
                 <button class="google" onclick="addGoogleCalendar()">
@@ -255,9 +196,9 @@
     <div id="location-menu" class="toggle-menu">
         <div class="location">
             <h1>Lokasi</h1>
-            <p>10A Jalan Seri Ampang 2</p>
-            <p>Kampung Pisang</p>
-            <p>47300 Subang, Selangor</p>
+            <p>Kampung Jeransang</p>
+            <p>Benta 27310</p>
+            <p>Kuala Lipis Pahang</p>
             <div class="button" onclick="openGoogleMaps()">
                 <button class="google">
                     <i class='bx bxl-google'></i>
@@ -273,12 +214,10 @@
 
     <div id="music-menu" class="toggle-menu">
         <div class="music">
-            <h1>Lagu</h1>
-            <p>Beautiful in White x Canon in D</p>
-            <p>(Piano Cover by Riyandi Kusuma)</p>
-            <audio id="audio-player" controls autoplay loop>
-                <source type="audio/mp3"
-                    src="./music/Beautiful in White x Canon in D (Piano Cover by Riyandi Kusuma).mp3">
+            <h1>Salam Kaut</h1>
+            <img src="./images/qr.jpg" alt="">
+            <audio id="audio-player" autoplay loop>
+                <source src="./music/Beautiful in White x Canon in D (Piano Cover by Riyandi Kusuma).mp3" type="audio/mp3">
             </audio>
         </div>
     </div>
